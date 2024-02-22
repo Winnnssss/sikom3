@@ -494,3 +494,39 @@ buks web php route::get('/',[Logincontroller::class,login])
 
 tambhkan use app\http\controller\logincontroller; 
 
+
+menghapus tulisan di dasboard
+
+masuk ke folder auth trus ketik login web 
+
+yang webnya di hupus trus scroll ke bawah di bagian 30-33 ada sig as main  trus tutup trus bloh trus hupus trus mengubah di tampilan input di bagian interiur email yang teks di ganti jadi email vuluenya di hupus trus di kasih kurung kurawal di dalamnya ketik old (‘email’) kalo udah di kasih name nama namenya yaitu email pindsh ke bawah bagian input password emailnya jadi password di block di tambah type submite  scroll ke atas kasih method =pos dibawahnya kasih csrf index html di hupus trus tambahin ke route klo udah buka web php di sini bikin route baru trus post namanya sama yang tadi yaitu out trus arahin ke bagian login kasih klas namanya auth jangan lupa; di kasih name namanya login trus buka login controller disini kita bikin function baru namanya request $request buka folder data base trus buka databes sider fublic function mas panggil dulu nama model trus klik user::create ([ jangan lupa use di atas ngarah ke model user di bawahnya di bikin nama kolom dari ini adalah username misalkan nama username admin 1 email admin 1@gmali.com panggil nama has make 2243 buat password nama lengkap trus role role di kasih administrator perivikasi trus pake alamat =subang trus buka terminal di viscod namanya php artisan db seed paling bawah trus masuk ke login 
+
+trus download dompdf omposer require barryvdh/laravel-dompdf
+
+ke controller bagian login kita cari public function auth bukin validasi trus di kasih email email wajib di isi password wajib di isi password.min password minimal 5 karakter
+trus bikin if (auth::atempt($validasi)) {
+			$request->session()->regenerate;
+
+return direct()->route(‘buku.index’); di kasih pesan (‘succes’,’berhasil login’);
+
+trus tambah return back(); 
+
+trus coba login pake email sama passwordnya yang tadi di buat
+
+logout bikin di web
+
+trus masuk ke navheader cari ke bawah no 72  hupus 123 sisain 1 yang di bawah trus arahin ke logout buka login controller di bawah bikin public function logout tambah auth 
+
+auth::logout();
+return redirect()->route(‘login’)
+
+menjalankan excel php artisan 
+
+exsport pdf sama exsport excel ke lewat
+
+export exsel masuk ke web . Php 
+
+kalo udah buka buku controller 
+
+public function export_excel
+
