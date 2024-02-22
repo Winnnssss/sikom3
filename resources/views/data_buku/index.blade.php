@@ -22,8 +22,12 @@
                     <div class="card-header pb-0">
                         <div class="d-flex my-auto btn-list justify-content-end">
                          <a href="{{ route('buku.create') }}" class="btn btn-primary">Tambah Data</a>
+                         @if (auth()->user()->role == 'petugas')
                          <a href="{{ route('export_excel') }}" class="btn btn-primary">Export Excel</a>
                          <a href="{{ route('export_pdf_buku') }}" class="btn btn-primary">Export Pdf</a>
+                         @elseif (auth()->user->role =='administrator')
+
+                         @endif
                          <a class="modal-effect btn btn-dark" data-bs-effect="effect-rotate-bottom" data-bs-toggle="modal" href="#modaldemo8">Import Excel</a>
                         
                         

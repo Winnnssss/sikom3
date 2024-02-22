@@ -27,7 +27,7 @@ Route::post('/create_register',[LoginController::class, 'create'])->name('create
 Route::resource('buku',BukuController::class);
 
 // ROUTE EXPORT PDF
-Route::get('/export_pdf_buku',[BukuController::class, 'export_pdf'])->name('export_pdf_buku'); // BUKU
+Route::get('/export_pdf_buku',[BukuController::class, 'export_pdf'])->name('export_pdf_buku')->middleware('role:petugas'); // BUKU
 
 // ROUTE EXPORT EXCEL
 Route::get('/export_excel',[BukuController::class, 'export_excel'])->name('export_excel'); // BUKU

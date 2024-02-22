@@ -17,14 +17,23 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        User::create([
-            'username' => 'admin1',
-            'email' => 'cas@gmail.com',
-            'password' => Hash::make('12345678'),
-            'nama_lengkap' => 'amin_satu',
-            'role' => 'administrator',
-            'verifikasi' => 'sudah',
-            'alamat' => 'subang',
+        // User::create([
+        //     'username' => 'petugas1',
+        //     'email' => 'petugas@gmail.com',
+        //     'password' => Hash::make('12345678'),
+        //     'nama_lengkap' => 'amin_satu',
+        //     'role' => 'petugas',
+        //     'verifikasi' => 'sudah',
+        //     'alamat' => 'subang',
+
+            User::create([
+                'username' => 'petugas1',
+                'email' => 'petugas@gmail.com',
+                'password' => Hash::make('12345678'),
+                'nama_lengkap' => 'amin_satu',
+                'role' => 'petugas',
+                'verifikasi' => 'sudah',
+                'alamat' => 'subang',
         ]);
     }
 }
